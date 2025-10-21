@@ -1,13 +1,9 @@
 {
-  "functions": {
-    "mcp-server.py": {
-      "runtime": "python3.12",
-      "maxDuration": 15,
-      "memory": 1024
-    }
-  },
+  "version": 2,
+  "builds": [
+    { "src": "mcp-server.py", "use": "@vercel/python" }
+  ],
   "routes": [
-    { "src": "/", "dest": "/mcp-server.py" },
     { "src": "/(.*)", "dest": "/mcp-server.py" }
   ]
 }
