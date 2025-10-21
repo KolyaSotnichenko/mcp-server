@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "mcp-server.py": {
+      "runtime": "python3.12",
+      "maxDuration": 15,
+      "memory": 1024
+    }
+  },
+  "routes": [
+    { "src": "/", "dest": "/mcp-server.py" },
+    { "src": "/(.*)", "dest": "/mcp-server.py" }
+  ]
+}
